@@ -9,29 +9,86 @@
     tools:context=".MainActivity">
 
 
- <!-- should be edit text -->>
     <Button
+        android:id="@+id/all_clear"
+        android:layout_width="@dimen/big_spacing"
+        android:layout_height="75dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="AC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/input_1_text"
+        app:layout_constraintStart_toStartOf="parent" />
+        <!-- android:onClick="switchScreens" -->
+
+    <!-- android:onClick="switchScreens" -->
+
+
+    <Button
+        android:id="@+id/sin_func"
+        android:layout_width="@dimen/med_spacing"
+        android:layout_height="50dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="AC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@id/input_1_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/input_1_text"
+        android:layout_width="237dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginBottom="390dp"
+        android:background="@color/md_theme_dark_outline"
+        android:backgroundTint="@color/md_theme_dark_outline"
+        android:text="Input 1:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/user_input_1"
+        android:layout_width="237dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="20dp"
+        android:background="@color/md_theme_dark_outline"
+        android:backgroundTint="@color/md_theme_dark_outline"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_1_text" />
+
+
+    <EditText
         android:id="@+id/input_2_text"
         android:layout_width="237dp"
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="268dp"
+        android:layout_marginBottom="220dp"
+        android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
         android:text="Input 2:"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- should be edit text -->>
-    <Button
+    <EditText
         android:id="@+id/user_input_2"
         android:layout_width="237dp"
-        android:layout_height="@dimen/user_input_size"
+        android:layout_height="75dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_2_text" />
 
     <Button
         android:id="@+id/enter_button"
@@ -45,17 +102,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="input_2_text,user_input_2" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="user_input_2,input_2_text" />
+   <androidx.constraintlayout.widget.Group
+       android:id="@+id/group_input_2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="@dimen/margin"
+       android:layout_marginBottom="225dp"
+       app:constraint_referenced_ids="input_2_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

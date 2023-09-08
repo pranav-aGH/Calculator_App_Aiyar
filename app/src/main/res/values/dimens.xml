@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="spacing"> 50dp </dimen>
+    <dimen name = "between_buttons"> 25dp</dimen>
+    <dimen name="med_spacing"> 125dp </dimen>
     <dimen name="big_spacing"> 125dp </dimen>
+    <dimen name="buttons_to_bottom"> 250dp </dimen>
     <dimen name = "padding"> 15dp</dimen>
     <dimen name = "margin"> 20dp</dimen>
     <dimen name = "text_width"> 400dp</dimen>
@@ -10,5 +13,5 @@
     <dimen name = "title_font"> 26sp</dimen>
 
     // button sizes
-    <dimen name = "user_input_size"> 65sp</dimen>
+    <dimen name = "user_input_width"> 250sp</dimen>
 </resources>
