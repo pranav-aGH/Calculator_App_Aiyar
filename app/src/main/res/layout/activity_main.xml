@@ -123,8 +123,8 @@
         android:layout_marginTop="20dp"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
+        android:inputType="number"
         android:ems="10"
-        android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_1_text" />
@@ -151,8 +151,8 @@
         android:layout_marginTop="20dp"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
+        android:inputType="number"
         android:ems="10"
-        android:inputType="text"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_2_text" />
@@ -180,17 +180,17 @@
 
     <TextView
         android:id="@+id/answer_display"
-        android:layout_width="400dp"
-        android:layout_height="@dimen/med_spacing"
+        android:layout_width="410dp"
+        android:layout_height="85dp"
         android:layout_marginBottom="@dimen/margin"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
-        android:text="="
         android:textAlignment="viewStart"
         android:textColor="@color/black"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/all_clear"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
