@@ -113,7 +113,8 @@ public class MainActivity extends AppCompatActivity {
         double degrees = Double.parseDouble(input1ET.getText().toString());
         double radians = Math.toRadians(degrees);
         double sin_radians = Math.sin(radians);
-        String roundedSin = String.format("%.3f", sin_radians); // Line of code given by ChatGPT
+        String roundedSin = String.format("%.3f", sin_radians); // Line of code given by ChatGPT given the
+        // prompt "round a variable to 3 decimal places in Java"
         display.setText("" + roundedSin);
     }
     public void modulus(View view) {
