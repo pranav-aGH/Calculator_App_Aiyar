@@ -124,21 +124,21 @@ public class MainActivity extends AppCompatActivity {
         EditText input1ET = findViewById(R.id.user_input_1);
         EditText input2ET = findViewById(R.id.user_input_2);
         TextView display = findViewById(R.id.answer_display);
+        double num1 = Double.parseDouble(input1ET.getText().toString());
+        double num2 = Double.parseDouble(input2ET.getText().toString());
+        double remainder = 0;
 
         try {
-            int num1 = Integer.parseInt(input1ET.getText().toString());
-            int num2 = Integer.parseInt(input2ET.getText().toString());
-            int remainder = 0;
             if (num2 != 0) {
                 remainder = num1 % num2;
-                String roundedRemainder = String.format("%.3f", remainder);
+                int roundedRemainder = (int) Math.round(remainder); // Math.round learned from vertex-academy.com
                 display.setText("" + roundedRemainder);
 
             } else {
                 display.setText("Cannot divide by 0");
             }
         } catch (Exception e) {
-            display.setText("Please enter 2 valid numbers");
+            display.setText(" " + "0");
         }
     }
 }
