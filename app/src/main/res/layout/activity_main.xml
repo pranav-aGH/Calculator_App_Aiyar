@@ -21,6 +21,7 @@
         android:backgroundTint="@color/md_theme_dark_inversePrimary"
         android:text="AC"
         android:textSize="34sp"
+        android:onClick="allClear"
         app:layout_constraintBottom_toTopOf="@id/input_1_text"
         app:layout_constraintStart_toStartOf="parent" />
     <!-- android:onClick="switchScreens" -->
@@ -48,6 +49,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/seed"
         android:text="/"
+        android:onClick="division"
         android:textColor="@color/white"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -62,6 +64,7 @@
         android:layout_marginTop="@dimen/between_opp_buttons"
         android:backgroundTint="@color/seed"
         android:text="*"
+        android:onClick="multiplication"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="60sp"
@@ -76,6 +79,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="@dimen/between_opp_buttons"
         android:backgroundTint="@color/seed"
+        android:onClick="subtraction"
         android:text="-"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -92,6 +96,7 @@
         android:layout_marginTop="@dimen/between_opp_buttons"
         android:backgroundTint="@color/seed"
         android:paddingBottom="5dp"
+        android:onClick="addition"
         android:text="+"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -102,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@id/subtraction" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/input_1_text"
         android:layout_width="237dp"
         android:layout_height="50dp"
@@ -111,7 +116,8 @@
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
         android:text="Input 1:"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/user_font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -123,14 +129,16 @@
         android:layout_marginTop="20dp"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
-        android:inputType="number"
         android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewEnd"
         android:textColor="@color/black"
+        android:textSize="@dimen/user_font"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_1_text" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/input_2_text"
         android:layout_width="237dp"
         android:layout_height="50dp"
@@ -139,7 +147,8 @@
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
         android:text="Input 2:"
-        android:textSize="20sp"
+        android:textSize="@dimen/user_font"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -151,9 +160,11 @@
         android:layout_marginTop="20dp"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
-        android:inputType="number"
         android:ems="10"
+        android:inputType="number"
+        android:textAlignment="viewEnd"
         android:textColor="@color/black"
+        android:textSize="@dimen/user_font"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_2_text" />
 
@@ -180,14 +191,14 @@
 
     <TextView
         android:id="@+id/answer_display"
-        android:layout_width="410dp"
+        android:layout_width="389dp"
         android:layout_height="85dp"
         android:layout_marginBottom="@dimen/margin"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
-        android:textAlignment="viewStart"
+        android:textAlignment="viewEnd"
         android:textColor="@color/black"
-        android:textSize="48sp"
+        android:textSize="@dimen/display_font"
         app:layout_constraintBottom_toTopOf="@+id/all_clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

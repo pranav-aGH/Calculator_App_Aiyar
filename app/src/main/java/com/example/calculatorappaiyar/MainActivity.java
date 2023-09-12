@@ -11,50 +11,105 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    /* private EditText input1, input2;
+    private Button addButton, subtractButton, multiplyButton, divideButton, enterButton;
+    private TextView answer; */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       /* input1 = findViewById(R.id.user_input_1);
+        input2 = findViewById(R.id.user_input_2);
+        addButton = findViewById(R.id.addition);
+        subtractButton = findViewById(R.id.subtraction);
+        divideButton = findViewById(R.id.division);
+        multiplyButton = findViewById(R.id.multiplication);
+        enterButton = findViewById(R.id.enter_button); */
+
+
     }
 
-    EditText user1ET = findViewById(R.id.user_input_1);
-    int user_num1 = Integer.parseInt(user1ET.getText().toString());
+    public void addition(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
 
-    EditText user2ET = findViewById(R.id.user_input_2);
-    int user_num2 = Integer.parseInt(user2ET.getText().toString());
-    TextView answerDisplay = findViewById(R.id.answer_display);
-    public void doAddition(View v){
-        // first make a reference to the EditText by locating its element in the xml file
-        int sum = user_num1 + user_num2;
-        answerDisplay.setText(String.valueOf(sum));
-    }
-    public void doSubtraction(View v) {
+        try {
+            int input1 = Integer.parseInt((input1ET.getText().toString()));
+            int input2 = Integer.parseInt((input2ET.getText().toString()));
+            int sum = input1 + input2;
 
-        int difference = user_num1 - user_num2;
-        answerDisplay.setText(String.valueOf(difference));
-    }
-    public void doMultiplication(View v) {
-
-        int product = user_num1 * user_num2;
-        answerDisplay.setText(String.valueOf(product));
-    }
-    public void doDivision(View v) {
-        if (user_num2 != 0) {
-            int result = user_num1/user_num2;
-            answerDisplay.setText(String.valueOf(result));
-        } else {
-            answerDisplay.setText("Cannot divide by zero");
+            display.setText("" + sum);
+        } catch (Exception e) {
+            display.setText("Please enter 2 valid numbers");
         }
     }
 
+    public void subtraction(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
+        try {
+            int num1 = Integer.parseInt((input1ET.getText().toString()));
+            int num2 = Integer.parseInt((input2ET.getText().toString()));
+            int difference = num1 - num2;
+
+            display.setText("" + difference);
+        } catch (Exception e) {
+            display.setText("Please enter 2 valid numbers");
+        }
+    }
+
+    public void multiplication(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
+
+        try {
+            int num1 = Integer.parseInt((input1ET.getText().toString()));
+            int num2 = Integer.parseInt((input2ET.getText().toString()));
+            int product = num1 * num2;
+
+            display.setText("" + product);
+        } catch (Exception e) {
+            display.setText("Please enter 2 valid numbers");
+        }
+    }
+
+    public void division(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
+
+        try {
+            double num1 = Double.parseDouble(input1ET.getText().toString());
+            double num2 = Double.parseDouble(input2ET.getText().toString());
+            double result = 0.0;
+            if (num2 != 0) {
+                result = num1 / num2;
+                display.setText("" + result);
+            } else {
+                display.setText("Cannot divide by 0");
+            }
+        } catch (Exception e) {
+            display.setText("Please enter 2 valid numbers");
+        }
+    }
+    public void allClear(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
+
+        input1ET.getText().clear();
+        input2ET.getText().clear();
+        display.setText(""); // Clear the result TextView as well if needed
+    }
+    public void sin_function(View view){
+        TextView display = findViewById(R.id.answer_display);
+        String displayText = display.getText().toString();
+        double degrees = Double.parseDouble(displayText);
+        double radians = Math.toRadians(degrees);
+        double sin_radians = Math.sin(radians);
+        display.setText("" + sin_radians);
+    }
 }
-
-
-
-
-
-
-
-
-
