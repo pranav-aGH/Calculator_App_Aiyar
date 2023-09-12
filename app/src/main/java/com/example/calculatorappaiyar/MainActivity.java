@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
             display.setText("Please enter 2 valid numbers");
         }
     }
+    // The allClear function clears the answer display and both input boxes.
     public void allClear(View view) {
         EditText input1ET = findViewById(R.id.user_input_1);
         EditText input2ET = findViewById(R.id.user_input_2);
@@ -106,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
         input2ET.getText().clear();
         display.setText(""); // Clear the result TextView as well if needed
     }
-    // The sin_function method below takes the users input1 and converts it to radians before taking the sin.
+    // The sin_function method below takes the users input1 and converts it to radians before taking the sin
+    // and displaying it to 3 decimal points.
     public void sin_function(View view){
         EditText input1ET = findViewById(R.id.user_input_1);
         TextView display = findViewById(R.id.answer_display);
@@ -117,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         // prompt "round a variable to 3 decimal places in Java"
         display.setText("" + roundedSin);
     }
+    // The modulus function takes the modulus of the user’s 2 inputted numbers and displays the remainder.
     public void modulus(View view) {
         EditText input1ET = findViewById(R.id.user_input_1);
         EditText input2ET = findViewById(R.id.user_input_2);
