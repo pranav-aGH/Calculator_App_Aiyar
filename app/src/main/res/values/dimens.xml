@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="spacing"> 50dp </dimen>
-    <dimen name = "between_opp_buttons"> 40dp</dimen>
+    <dimen name = "between_opp_buttons"> 30dp</dimen>
     <dimen name="med_spacing"> 75dp </dimen>
     <dimen name="big_spacing"> 125dp </dimen>
     <dimen name="buttons_to_bottom"> 250dp </dimen>

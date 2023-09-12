@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
             double result = 0.0;
             if (num2 != 0) {
                 result = num1 / num2;
-                display.setText("" + result);
+                String roundedResult = String.format("%.3f", result);
+                display.setText("" + roundedResult);
+
             } else {
                 display.setText("Cannot divide by 0");
             }
@@ -104,12 +106,35 @@ public class MainActivity extends AppCompatActivity {
         input2ET.getText().clear();
         display.setText(""); // Clear the result TextView as well if needed
     }
+    // The sin_function method below takes the users input1 and converts it to radians before taking the sin.
     public void sin_function(View view){
+        EditText input1ET = findViewById(R.id.user_input_1);
         TextView display = findViewById(R.id.answer_display);
-        String displayText = display.getText().toString();
-        double degrees = Double.parseDouble(displayText);
+        double degrees = Double.parseDouble(input1ET.getText().toString());
         double radians = Math.toRadians(degrees);
         double sin_radians = Math.sin(radians);
-        display.setText("" + sin_radians);
+        String roundedSin = String.format("%.3f", sin_radians); // Line of code given by ChatGPT
+        display.setText("" + roundedSin);
+    }
+    public void modulus(View view) {
+        EditText input1ET = findViewById(R.id.user_input_1);
+        EditText input2ET = findViewById(R.id.user_input_2);
+        TextView display = findViewById(R.id.answer_display);
+
+        try {
+            int num1 = Integer.parseInt(input1ET.getText().toString());
+            int num2 = Integer.parseInt(input2ET.getText().toString());
+            int remainder = 0;
+            if (num2 != 0) {
+                remainder = num1 % num2;
+                String roundedRemainder = String.format("%.3f", remainder);
+                display.setText("" + roundedRemainder);
+
+            } else {
+                display.setText("Cannot divide by 0");
+            }
+        } catch (Exception e) {
+            display.setText("Please enter 2 valid numbers");
+        }
     }
 }

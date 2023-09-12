@@ -12,32 +12,49 @@
     tools:context=".MainActivity">
 
 
+    <!-- android:onClick="switchScreens" -->
+
+
+    <Button
+        android:id="@+id/modulus"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="@dimen/between_opp_buttons"
+        android:backgroundTint="@color/seed"
+        android:onClick="modulus"
+        android:text="%"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/division"
+        app:layout_constraintStart_toEndOf="@+id/sin_func" />
+
     <Button
         android:id="@+id/all_clear"
         android:layout_width="@dimen/big_spacing"
         android:layout_height="75dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/md_theme_dark_inversePrimary"
+        android:onClick="allClear"
         android:text="AC"
         android:textSize="34sp"
-        android:onClick="allClear"
         app:layout_constraintBottom_toTopOf="@id/input_1_text"
         app:layout_constraintStart_toStartOf="parent" />
-    <!-- android:onClick="switchScreens" -->
-
 
     <Button
         android:id="@+id/sin_func"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="196dp"
+        android:layout_width="135dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="@color/black"
-        android:text="sin"
+        android:onClick="sin_function"
+        android:text="sin (rad)"
         android:textAlignment="center"
         android:textColor="@color/seed"
-        android:textSize="34sp"
+        android:textSize="@dimen/user_font"
         app:layout_constraintStart_toEndOf="@+id/all_clear"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,6 +105,7 @@
         app:layout_constraintStart_toEndOf="@+id/input_2_text"
         app:layout_constraintTop_toBottomOf="@id/multiplication" />
 
+
     <Button
         android:id="@+id/addition"
         android:layout_width="100dp"
@@ -95,17 +113,16 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="@dimen/between_opp_buttons"
         android:backgroundTint="@color/seed"
-        android:paddingBottom="5dp"
         android:onClick="addition"
+        android:paddingBottom="5dp"
         android:text="+"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textIsSelectable="false"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/enter_button"
+        app:layout_constraintStart_toEndOf="@+id/user_input_2"
         app:layout_constraintTop_toBottomOf="@id/subtraction" />
-
 
     <TextView
         android:id="@+id/input_1_text"
@@ -143,12 +160,12 @@
         android:layout_width="237dp"
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="224dp"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
         android:text="Input 2:"
-        android:textSize="@dimen/user_font"
         android:textColor="@color/black"
+        android:textSize="@dimen/user_font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -168,32 +185,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_2_text" />
 
-    <Button
-        android:id="@+id/enter_button"
-        android:layout_width="237dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="@dimen/margin"
-        android:backgroundTint="@color/md_theme_dark_inversePrimary"
-        android:onClick="switchScreens"
-        android:text="ENTER"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group_input_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginBottom="225dp"
         app:constraint_referenced_ids="input_2_text" />
 
     <TextView
         android:id="@+id/answer_display"
         android:layout_width="389dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginBottom="@dimen/spacing"
         android:background="@color/md_theme_dark_outline"
         android:backgroundTint="@color/md_theme_dark_outline"
         android:textAlignment="viewEnd"
